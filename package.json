@@ -1,0 +1,28 @@
+{
+  "name": "@tizenbrew/iyf-tv",
+  "appName": "IYF TV Mod",
+  "version": "1.0.0",
+  "description": "TizenBrew module for enhancing iyf.tv experience on Tizen TVs",
+  "packageType": "mods",
+  "websiteURL": "https://www.iyf.tv/",
+  "main": "dist/userScript.js",
+  "author": "",
+  "serviceFile": "dist/service.js",
+  "keys": [
+    "MediaPlayPause",
+    "MediaPlay",
+    "MediaPause",
+    "MediaStop",
+    "MediaFastForward",
+    "MediaRewind",
+    "MediaTrackNext",
+    "MediaTrackPrevious"
+  ],
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "build": "npm run build:mods && npm run build:service",
+    "build:mods": "cd mods && npm run build",
+    "build:service": "cd service && npm run build"
+  }
+}
+

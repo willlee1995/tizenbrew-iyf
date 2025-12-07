@@ -1,0 +1,10 @@
+node_modules
+mods
+service
+dist
+*.wgt
+.sign
+package-lock.json
+.git
+.gitignore
+
