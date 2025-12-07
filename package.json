@@ -1,7 +1,7 @@
 {
   "name": "@tizenbrew/iyf-tv",
   "appName": "IYF TV Mod",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "TizenBrew module for enhancing iyf.tv experience on Tizen TVs",
   "packageType": "mods",
   "websiteURL": "https://www.iyf.tv/",
