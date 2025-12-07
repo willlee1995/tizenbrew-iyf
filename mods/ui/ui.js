@@ -6,7 +6,7 @@ import './ui.css';
  */
 
 function initUI() {
-  // Inject CSS
+  // Inject CSS (navigation.css is imported separately)
   const style = document.createElement('style');
   style.textContent = `
     /* Custom UI styles */

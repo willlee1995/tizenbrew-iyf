@@ -1,0 +1,35 @@
+/* Spatial Navigation Styles for IYF TV */
+
+.iyf-tv-focusable {
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.iyf-tv-focusable:focus,
+.iyf-tv-focused {
+  outline: 3px solid #007bff !important;
+  outline-offset: 2px !important;
+  transform: scale(1.05);
+  z-index: 1000;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.5) !important;
+}
+
+/* Ensure focusable items are visible */
+.iyf-tv-focusable {
+  cursor: pointer;
+}
+
+/* Improve focus visibility on dark backgrounds */
+.iyf-tv-focusable:focus {
+  filter: brightness(1.1);
+}
+
+/* Prevent text selection during navigation */
+.iyf-tv-focusable {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+

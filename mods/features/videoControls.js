@@ -158,8 +158,15 @@ function handleKeyPress(event) {
   const now = Date.now();
 
   // Only handle keys when video is playing or recently paused
+  // Don't interfere with spatial navigation when video is not playing
   if (!isVideoPlaying() && !isVideoFocused && (now - lastKeyPressTime) > 3000) {
-    return;
+    return; // Let spatial navigation handle it
+  }
+
+  // Don't intercept arrow keys if video is not playing (let spatial nav handle them)
+  const arrowKeys = [TV_KEYS.ARROW_UP, TV_KEYS.ARROW_DOWN, TV_KEYS.ARROW_LEFT, TV_KEYS.ARROW_RIGHT];
+  if (arrowKeys.includes(keyCode) && !isVideoPlaying() && !isVideoFocused) {
+    return; // Let spatial navigation handle arrow keys
   }
 
   lastKeyPressTime = now;
