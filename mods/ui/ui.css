@@ -14,13 +14,17 @@
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.85);
   color: white;
   padding: 15px 20px;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 500;
   pointer-events: auto;
   animation: slideIn 0.3s ease-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  min-width: 150px;
+  text-align: center;
 }
 
 @keyframes slideIn {
@@ -32,5 +36,68 @@
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+/* TV Remote Control Overlay */
+#iyf-tv-control-overlay {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+#iyf-tv-control-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.iyf-tv-controls-container {
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 12px;
+  padding: 20px 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.iyf-tv-controls-row {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.iyf-tv-controls-row:last-child {
+  margin-bottom: 0;
+}
+
+.iyf-tv-control-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.iyf-tv-control-key {
+  font-size: 32px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.iyf-tv-control-label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  font-weight: 400;
 }
 

@@ -3,6 +3,7 @@
 
 import './config.js';
 import './features/adblock.js';
+import './features/tvRemoteControls.js';
 import './features/videoControls.js';
 import './ui/ui.js';
 
